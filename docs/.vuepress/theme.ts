@@ -6,18 +6,18 @@ export default hopeTheme({
   hostname: "https://java.isture.com",
 
   author: {
-    name: "zszdevelop",
+    name: "bujidao",
     url: "https://java.isture.com",
   },
 
   iconAssets: "iconfont",
 
-  logo: "/logo.svg",
+  logo: "/theme.png",
 
   repo: "zszdevelop/java-study-gitbook",
 
   docsDir: "docs",
-  
+
    // navbar
    navbar: navbar,
 
