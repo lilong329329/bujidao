@@ -3,8 +3,8 @@ home: true
 icon: home
 title: 项目主页
 heroImage: /logo.svg
-heroText: Java学习笔记
-tagline: 学习笔记 & 工作总结
+heroText: 布吉岛的知识笔记
+tagline: 该项目主要记录我从毕业到工作的Java学习笔记&工作总结，把平时碎片化的知识系统性的整理出来，不断完善自己的认知...
 actions:
   - text: 开始学习 💡
     link: /java/base/Java-basis-oop
@@ -56,9 +56,10 @@ features:
     link: /think/deepImpression/redis-bigdata-slow-problem
 
 copyright: false
-footer: MIT Licensed | Copyright © 2016-2022 zszdevelop <br/> <a href="https://beian.miit.gov.cn">闽ICP备18001806号-1</a>
+footer: 布吉岛 | Copyright © 2019-2023 <a href= "#" >lilong329329@gmail.com</a> 
 ---
 
+[//]: # (<br/> <a href="https://beian.miit.gov.cn">闽ICP备18001806号-1</a>)
 ## 是什么？
 
 该项目主要记录我这一路走来的Java学习笔记&工作总结，随着自己对某一项知识/技术的认知加深、也在不断的推翻完善中...
