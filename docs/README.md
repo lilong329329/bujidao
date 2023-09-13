@@ -34,6 +34,11 @@ features:
     details: 架构基础、分布式系统
     link: /arch/base/arch-basic
 
+  - title: 软件|资源|教程
+    icon: strong
+    details: office、Adobe、JetBrains、远程连接工具、OverWall等工具
+    link: /softSource/Adobe系列
+
   - title: 开发|测试
     icon: debug
     details: 常用类库/工具类、测试
@@ -52,7 +57,7 @@ features:
 
   - title: 杂项|思考
     icon: anonymous
-    details: 印象深刻bug、优化
+    details: 印象深刻bug、优化、工作总结、人生思考
     link: /think/deepImpression/redis-bigdata-slow-problem
 
 copyright: false
