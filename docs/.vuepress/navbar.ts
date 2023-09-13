@@ -5,10 +5,10 @@ export default navbar([
   // "/home",
   {
     text: "Java",
-    icon: "creative",
+    // icon: "creative",
     prefix: "/java/",
     children: [
-      
+
       {
         text: "Java基础",
         link: "base/Java-basis-oop"
@@ -25,7 +25,7 @@ export default navbar([
         text: "Java并发",
         link: "thread/java-thread-x-theorty"
       },
-     
+
       {
         text: "Java8",
         link: "java8/java8-lambda"
@@ -36,13 +36,13 @@ export default navbar([
       },
     ]
   },
-  
+
   {
     text: "数据库",
-    icon: "creative",
+    // icon: "creative",
     prefix: "/db/",
     children: [
-      
+
       {
         text: "数据库基础/SQL基础",
         link: "sql/sql-x-basic"
@@ -52,7 +52,7 @@ export default navbar([
         children: [
           { text: "Mysql", link: "mysql/sql-mysql-overview" },
           { text: "Oracle", link: "oracle/oracle-b-sequence" },
-          { text: "达梦", link: "dm/dm-operation-console" },
+          // { text: "达梦", link: "dm/dm-operation-console" },
         ],
       },
       {
@@ -68,7 +68,7 @@ export default navbar([
   },
   {
     text: "框架|依赖",
-    icon: "creative",
+    // icon: "creative",
     prefix: "/dependencies/",
     children:[
       {
@@ -87,38 +87,38 @@ export default navbar([
       },
       { text: "Office文档操作", link: "office/office-x-aspose" },
       { text: "CAS单点登录", link: "cas/cas-x-overview" },
-      
+
     ]
   },
-  
+
   {
     text: "开发|测试",
-    icon: "creative",
+    // icon: "creative",
     prefix: "/develop/",
     children: [
       {
         text: "开发-常用类库",
-        icon: "creative",
+        // icon: "creative",
         link: "devlibrary/dev-lib-lombok"
       },
       {
         text: "开发-安全",
-        icon: "creative",
+        // icon: "creative",
         link: "security/dev-security-x-injection"
       },
       {
         text: "开发 - 优化",
-        icon: "creative",
+        // icon: "creative",
         link: "optimization/optimization-x-interface-optimization"
       },
       {
         text: "开发 - 规范/风格",
-        icon: "creative",
+        // icon: "creative",
         link: "style/dev-qt-code-style"
       },
       {
         text: "测试",
-        icon: "creative",
+        // icon: "creative",
         link: "test/ut-overview"
       },
     ]
@@ -127,15 +127,15 @@ export default navbar([
 
   {
     text: "软件|部署",
-    icon: "creative",
+    // icon: "creative",
     prefix: "/deploy/",
     children: [
       {
         text: "Docker",
-        icon: "creative",
+        // icon: "creative",
         link: "docker/docker-basic-overview"
       },
-      
+
       {
         text: "消息队列",
         children: [
@@ -146,119 +146,148 @@ export default navbar([
       },
       {
         text: "Skywalking",
-        icon: "creative",
+        // icon: "creative",
         link: "skywalking/skywalking-x-principle"
       },
       {
         text: "Linux",
-        icon: "creative",
+        // icon: "creative",
         link: "linux/linux-j-monitor-overview"
       },
       {
         text: "Jenkins",
-        icon: "creative",
+        // icon: "creative",
         link: "jenkins/jenkins-overview"
       },
       {
         text: "Nginx",
-        icon: "creative",
+        // icon: "creative",
         link: "nginx/nginx-x-overview"
       },
 
       {
         text: "部署",
-        icon: "creative",
+        // icon: "creative",
         link: "deploy/docker-basic-overview"
       },
-      
+
     ]
   },
   {
     text: "架构|系统",
-    icon: "creative",
+    // icon: "creative",
     prefix: "/arch/",
     children: [
       {
         text: "架构基础",
-        icon: "creative",
+        // icon: "creative",
         link: "base/arch-basic"
       },
       {
         text: "分布式系统",
-        icon: "creative",
+        // icon: "creative",
         link: "distributed/arch-id"
       },
       {
         text: "微服务",
-        icon: "creative",
+        // icon: "creative",
         link: "microservices/ms-overview"
       },
       {
         text: "对象存储-Minio",
-        icon: "creative",
+        // icon: "creative",
         link: "minio/minio-concept"
       },
       {
         text: "后台管理系统",
-        icon: "creative",
+        // icon: "creative",
         link: "manage-system/manage-system-technical-selection"
       },
       {
         text: "商城设计",
-        icon: "creative",
+        // icon: "creative",
         link: "mall/mall-sku"
       },
     ]
 
   },
   {
+    text: "软件|资源|教程",
+    prefix: "/softSource/",
+    children: [
+      {text: "Office系列",link: "Office系列"},
+      {text: "Adobe系列",link: "Adobe系列"},
+      {text: "jetBrains系列",link: "jetBrains系列"},
+      {text: "远程链接工具",link: "远程链接工具"},
+      {text: "亲测好用工具",link: "亲测好用工具"},
+      {text: "overWall",link: "overWall"},
+
+    ]
+  },
+  {
     text: "语言|平台",
-    icon: "creative",
+    // icon: "creative",
     prefix: "/language/",
     children:[
       {
         text: "前端",
-        icon: "creative",
+        // icon: "creative",
         link: "frontend-layout/flex-layout-overview"
       },
       {
         text: "python",
-        icon: "creative",
+        // icon: "creative",
         link: "python/python-advantage"
       },
       {
         text: "微信",
-        icon: "creative",
+        // icon: "creative",
         link: "weixin/wx-package-Optimization"
       },
       {
         text: "AI人工智能",
-        icon: "creative",
+        // icon: "creative",
         link: "ai/knowledge-graph-build"
       },
     ]
   },
   {
     text: "杂项|思考",
-    icon: "creative",
+    // icon: "creative",
     prefix: "/think/",
     children:[
+      {text: "印象深刻bug", link: "deepImpression/redis-bigdata-slow-problem"},
+      {text: "优化", link: "optimization/optimization-x-frequent-operation-db"},
+      {text: "杂项", link: "misc/misc-x-middleware"},
+      { text: "人生思考", link: "人生思考"},
+      { text: "传记相关", link: "传记相关"},
+      { text: "军事相关", link: "军事相关"},
+      { text: "历史相关", link: "历史相关"},
+      { text: "科技相关", link: "科技相关"},
+      { text: "工作总结", link: "工作总结"},
+    ]
+  },
+  {
+    text: "关于我",
+    // // icon: "creative",
+    prefix: "/about/",
+    children:[
       {
-        text: "印象深刻bug",
-        icon: "creative",
-        link: "deepImpression/redis-bigdata-slow-problem"
+        text: "个人经历|简历",
+        // // icon: "creative",
+        link: "Resume"
       },
       {
-        text: "优化",
-        icon: "creative",
-        link: "optimization/optimization-x-frequent-operation-db"
+        text: "目前正做",
+        // // icon: "creative",
+        link: "CurrentDoing"
       },
       {
-        text: "杂项",
-        icon: "creative",
-        link: "misc/misc-x-middleware"
+        text: "未来规划",
+        // // icon: "creative",
+        link: "FuturePlan"
       },
-      
+
     ]
   }
 ]);
