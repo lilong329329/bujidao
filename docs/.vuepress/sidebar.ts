@@ -5,7 +5,7 @@ export default sidebar({
   "/followMe/": "structure",
   "/frame/": "structure",
   "/Iot/": "structure",
-  "/javaSE/": "structure",
+  "/JavaSE/": "structure",
   "/jgxitong/": "structure",
   "/pages/": "structure",
   "/softdevlop/": "structure",
