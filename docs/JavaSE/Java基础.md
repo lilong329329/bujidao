@@ -58,17 +58,7 @@
 
 在Idea中新建文件步骤：
 	1、先创建一个项目，找到Create new Project
-
-![image-20210706152901985](day01%20Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95.assets/image-20210706152901985.png)
-
-2、新建一个空工程  empty Project 
-
-![image-20210706153116028](day01%20Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95.assets/image-20210706153116028.png)
-
-![image-20210706153147540](day01%20Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95.assets/image-20210706153147540.png)
-
-![image-20210706153305296](day01%20Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95.assets/image-20210706153305296.png)
-
+    2、新建一个空工程  empty Project 
 新建一个实际的项目
 
 ​	在空文件夹下面 
@@ -351,7 +341,6 @@ double h = f;
 double ff =g;
 ```
 
-![image-20210707164856603](day01%20Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95.assets/image-20210707164856603.png)
 
 # day02 Java基础语法
 

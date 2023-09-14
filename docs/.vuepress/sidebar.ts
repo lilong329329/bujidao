@@ -1,6 +1,16 @@
 import { sidebar } from "vuepress-theme-hope";
 
 export default sidebar({
+  "/about/": "structure",
+  "/followMe/": "structure",
+  "/frame/": "structure",
+  "/Iot/": "structure",
+  "/javaSE/": "structure",
+  "/jgxitong/": "structure",
+  "/pages/": "structure",
+  "/softdevlop/": "structure",
+  "/softSource/": "structure",
+  "/database/": "structure",
   "/java/": "structure",
   "/db/": "structure",
   "/develop/": "structure",
@@ -8,6 +18,7 @@ export default sidebar({
   "/arch/": "structure",
   "/deploy/": "structure",
   "/language/": "structure",
-  "/think/": "structure"
+  "/think/": "structure",
+  "/work/": "structure"
 }
 );
