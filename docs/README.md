@@ -2,9 +2,9 @@
 home: true
 icon: home
 title: 项目主页
-heroImage: /logo.svg
-heroText: Java学习笔记
-tagline: 学习笔记 & 工作总结
+heroImage: /logo.png
+heroText: 布吉岛的知识笔记
+tagline: 该项目主要记录我从毕业到工作的Java学习笔记&工作总结，把平时碎片化的知识系统性的整理出来，不断完善自己的认知...
 actions:
   - text: 开始学习 💡
     link: /java/base/Java-basis-oop
@@ -34,6 +34,11 @@ features:
     details: 架构基础、分布式系统
     link: /arch/base/arch-basic
 
+  - title: 软件|资源|教程
+    icon: strong
+    details: office、Adobe、JetBrains、远程连接工具、OverWall等工具
+    link: /softSource/Adobe系列
+
   - title: 开发|测试
     icon: debug
     details: 常用类库/工具类、测试
@@ -52,45 +57,38 @@ features:
 
   - title: 杂项|思考
     icon: anonymous
-    details: 印象深刻bug、优化
+    details: 印象深刻bug、优化、工作总结、人生思考
     link: /think/deepImpression/redis-bigdata-slow-problem
 
 copyright: false
-footer: MIT Licensed | Copyright © 2016-2022 zszdevelop <br/> <a href="https://beian.miit.gov.cn">闽ICP备18001806号-1</a>
+footer: 布吉岛 | Copyright © 2019-2023 <a href= "#" >lilong329329@gmail.com</a> 
 ---
 
+[//]: # (<br/> <a href="https://beian.miit.gov.cn">闽ICP备18001806号-1</a>)
 ## 是什么？
 
-该项目主要记录我这一路走来的Java学习笔记&工作总结，随着自己对某一项知识/技术的认知加深、也在不断的推翻完善中...
+该项目主要记录我这一路走来的Java学习笔记&工作总结，随着自己对某一项知识/技术的认知加深、也在不断的更新完善中...
 
 ## 为什么写？
 
-> 学习笔记模块的内容很多是基于网上的内容转载/二创。那为什么还要写笔记？
+- 记录自己在学习工作中遇到的及接触到的碎片化知识，把碎片化知识按照体系整理出来...
 
 - 融入自己的想法
 
-  笔记并不是全盘摘抄、更需要融入自己对这块知识点的看法。有些博客内容并不一定全对（存在错误、过时、好坏参半）、这些都需要自己重新整理与思考，才能更好的消化。
+  在工作之余，对整个专业体系进行系统性的整理总结，完成了自己的个人博客，在此期间做过电商系统、在线教育系统、智慧医疗系统，支撑客户系统正常运营及功能实现，同时也录制了个人视频教程以供他人学习，即使这样仍然感觉有很多东西未能够掌握的透彻及深刻，经过个人思考着手搭建了一套记录个人学习、工作、思考的个人网站博客.
 
 - 更好的记忆与吸收知识
 
-  把零散的、大篇幅的知识，逻辑梳理出来，重难点突出出来，从而更好的将知识记住。
+  我一直信奉碎片化的知识远远不能让自己提升到某一个高度，如果需要对某个行业或者某个专业深入了解或者掌握，必须要对这个专业或者领域进行系统性的整合整理以及记录
 
-  且知识需要不断复习、加深记忆。如果每次都从网上找，那每次都是新篇章
 
 ## 参考与鸣谢
 
 **本项目的内容主要来自**
 
-自己的工作总结，读书笔记，以及对网上博客文章进行整理与总结。希望以最明了易懂的方式呈现出java技术架构，以便轻松应对面试
+自己的工作总结，读书笔记，以及对网上博客文章进行整理与总结。希望以最明了易懂的方式呈现出java技术架构，以便轻松应对未来挑战
 
-- [Java 全栈知识体系](https://pdai.tech/)
-- [苏三说技术](https://mp.weixin.qq.com/s/XPyz_GSsLeae0pEAI_opcQ)
-- [Java学习+面试指南](<https://github.com/Snailclimb/JavaGuide>)
-- [阮一峰的网络日志](http://www.ruanyifeng.com/blog/)
-- [mrbird博客与开源项目](https://github.com/wuyouzhuguli)
-- [安琪拉的博客](https://blog.csdn.net/zhengwangzw?type=blog)
-- [芋道源码](http://www.iocoder.cn/?qun)
-- [张开涛博客](<https://www.iteye.com/blog/user/jinnianshilongnian>)
-- [纯洁的微笑](http://www.ityouknow.com/)
-- 等等优秀的博客会在具体文章后列出
+[//]: # (- [Java 全栈知识体系]&#40;https://pdai.tech/&#41;)
+
+[//]: # (- 等等优秀的博客会在具体文章后列出)
 

@@ -6,18 +6,18 @@ export default hopeTheme({
   hostname: "https://zszdevelop.github.io/java-study-gitbook",
 
   author: {
-    name: "zszdevelop",
+    name: "bujidao",
     url: "https://java.isture.com",
   },
 
   iconAssets: "iconfont",
 
-  logo: "/logo.svg",
+  logo: "/theme.png",
 
-  repo: "zszdevelop/java-study-gitbook",
+  // repo: "zszdevelop/java-study-gitbook",   //配置github链接使用
 
   docsDir: "docs",
-  
+
    // navbar
    navbar: navbar,
 
@@ -32,7 +32,7 @@ export default hopeTheme({
   pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime"],
 
   blog: {
-    description: "一个Java开发者",
+    description: "做一个有深度的开发者",
     intro: "/intro.html",
     medias: {
       GitHub: "hhttps://github.com/zszdevelop",
@@ -116,67 +116,5 @@ export default hopeTheme({
       vuePlayground: true,
     },
 
-    // uncomment these if you want a pwa
-    // pwa: {
-    //   favicon: "/favicon.ico",
-    //   cacheHTML: true,
-    //   cachePic: true,
-    //   appendBase: true,
-    //   apple: {
-    //     icon: "/assets/icon/apple-icon-152.png",
-    //     statusBarColor: "black",
-    //   },
-    //   msTile: {
-    //     image: "/assets/icon/ms-icon-144.png",
-    //     color: "#ffffff",
-    //   },
-    //   manifest: {
-    //     icons: [
-    //       {
-    //         src: "/assets/icon/chrome-mask-512.png",
-    //         sizes: "512x512",
-    //         purpose: "maskable",
-    //         type: "image/png",
-    //       },
-    //       {
-    //         src: "/assets/icon/chrome-mask-192.png",
-    //         sizes: "192x192",
-    //         purpose: "maskable",
-    //         type: "image/png",
-    //       },
-    //       {
-    //         src: "/assets/icon/chrome-512.png",
-    //         sizes: "512x512",
-    //         type: "image/png",
-    //       },
-    //       {
-    //         src: "/assets/icon/chrome-192.png",
-    //         sizes: "192x192",
-    //         type: "image/png",
-    //       },
-    //     ],
-    //     shortcuts: [
-    //       {
-    //         name: "Demo",
-    //         short_name: "Demo",
-    //         url: "/demo/",
-    //         icons: [
-    //           {
-    //             src: "/assets/icon/guide-maskable.png",
-    //             sizes: "192x192",
-    //             purpose: "maskable",
-    //             type: "image/png",
-    //           },
-    //           {
-    //             src: "/assets/icon/guide-monochrome.png",
-    //             sizes: "192x192",
-    //             purpose: "monochrome",
-    //             type: "image/png",
-    //           },
-    //         ],
-    //       },
-    //     ],
-    //   },
-    // },
   },
 });

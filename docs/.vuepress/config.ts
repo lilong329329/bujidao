@@ -4,8 +4,8 @@ import { docsearchPlugin } from "@vuepress/plugin-docsearch";
 
 export default defineUserConfig({
   lang: "zh-CN",
-  title: "Java学习笔记",
-  description: "工作总结，读书笔记",
+  title: "布吉岛的知识笔记",
+  description: "该项目主要记录我从毕业到工作的Java学习笔记&工作总结，把平时碎片化的知识系统性的整理出来，不断完善自己的认知...",
   base: "/",
   head: [
     ['script', {}, `
