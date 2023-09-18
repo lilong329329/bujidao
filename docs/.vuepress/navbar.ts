@@ -182,6 +182,7 @@ export default navbar([
       {text: "杂项", link: "misc/misc-x-middleware"},
       { text: "人生思考", link: "人生思考"},
       { text: "读书总结", link: "读书总结"},
+      { text: "博士申请准备", link: "博士申请准备"},
       // { text: "传记相关", link: "传记相关"},
       // { text: "军事相关", link: "军事相关"},
       // { text: "历史相关", link: "历史相关"},

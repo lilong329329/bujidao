@@ -1,5 +1,6 @@
 .DS_Store
 node_modules/
+/.cache
 docs/.vuepress/.temp/
 docs/.vuepress/.cache/
 npm-debug.log*
