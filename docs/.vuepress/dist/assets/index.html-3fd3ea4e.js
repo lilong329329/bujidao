@@ -1,0 +1,1 @@
+import{_ as t,W as a,X as c,Z as e,$ as n}from"./framework-4b7e9ff4.js";const r={},s=e("h2",{id:"微服务",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#微服务","aria-hidden":"true"},"#"),n(" 微服务")],-1),o=[s];function _(d,i){return a(),c("div",null,o)}const l=t(r,[["render",_],["__file","index.html.vue"]]);export{l as default};

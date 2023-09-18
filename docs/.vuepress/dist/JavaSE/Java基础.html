@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-beta.59" />
+    <meta name="theme" content="VuePress Theme Hope" />
+    <meta property="og:url" content="https://zszdevelop.github.io/java-study-gitbook/JavaSE/Java%E5%9F%BA%E7%A1%80.html"><meta property="og:site_name" content="布吉岛的知识笔记"><meta property="og:title" content="Java基础语法"><meta property="og:description" content="1、Java概述 1.1 Java的起源 ​			语言：计算机有自己独特的语言：比如，java、C（面向过程）C++ （C plus plus cpp）Python、go语言、ruby、erlang、scla ​	java语言：java语言的由来 詹姆斯·高斯林（James Gosling） ​	图灵奖：姚期智 获取图灵奖 （计算机方面的最高奖项，图灵..."><meta property="og:type" content="article"><meta property="og:updated_time" content="2023-09-14T08:13:06.000Z"><meta property="og:locale" content="zh-CN"><meta property="article:author" content="李龙"><meta property="article:published_time" content="2021-12-11T16:00:00.000Z"><meta property="article:modified_time" content="2023-09-14T08:13:06.000Z"><script>
+          var _hmt = _hmt || [];
+          (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?78dc0e0b4e3aedf643d6621778307a6f";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+          })();
+      </script><title>Java基础语法 | 布吉岛的知识笔记</title><meta name="description" content="1、Java概述 1.1 Java的起源 ​			语言：计算机有自己独特的语言：比如，java、C（面向过程）C++ （C plus plus cpp）Python、go语言、ruby、erlang、scla ​	java语言：java语言的由来 詹姆斯·高斯林（James Gosling） ​	图灵奖：姚期智 获取图灵奖 （计算机方面的最高奖项，图灵...">
+    <style>
+      :root {
+        --bg-color: #fff;
+      }
+
+      html[data-theme="dark"] {
+        --bg-color: #1d2025;
+      }
+
+      html,
+      body {
+        background: var(--bg-color);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem("vuepress-theme-hope-scheme");
+      const systemDarkMode =
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      if (userMode === "dark" || (userMode !== "light" && systemDarkMode)) {
+        document.querySelector("html").setAttribute("data-theme", "dark");
+      }
+    </script>
+    <link rel="preload" href="/assets/style-21064aac.css" as="style"><link rel="stylesheet" href="/assets/style-21064aac.css">
+    <link rel="modulepreload" href="/assets/app-f67e37b4.js"><link rel="modulepreload" href="/assets/framework-4b7e9ff4.js"><link rel="modulepreload" href="/assets/Java基础.html-96728eda.js"><link rel="modulepreload" href="/assets/Java基础.html-efbb586d.js">
+  </head>
+  <body>
+    <div id="app"><!--[--><!--[--><!--[--><span tabindex="-1"></span><a href="#main-content" class="skip-link sr-only">跳至主要內容</a><!--]--><div class="theme-container has-toc"><!--[--><!--[--><header class="navbar"><div class="navbar-left"><button class="toggle-sidebar-button" title="Toggle Sidebar"><span class="icon"></span></button><!--[--><!----><!--]--><a href="/" class="brand"><img class="logo" src="/theme.png" alt="布吉岛的知识笔记"><!----><span class="site-name hide-in-pad">布吉岛的知识笔记</span></a><!--[--><!----><!--]--></div><div class="navbar-center"><!--[--><!----><!--]--><nav class="nav-links"><div class="nav-item hide-in-mobile"><div class="dropdown-wrapper"><button class="dropdown-title" type="button" aria-label="Java"><span class="title"><!---->Java</span><span class="arrow"></span><ul class="nav-dropdown"><li class="dropdown-item"><a href="/java/base/Java-basis-oop.html" class="nav-link" aria-label="Java基础"><!---->Java基础<!----></a></li><li class="dropdown-item"><a href="/java/io/java-io-overview.html" class="nav-link" aria-label="Java IO"><!---->Java IO<!----></a></li><li class="dropdown-item"><a href="/java/collection/java-collection-overview.html" class="nav-link" aria-label="Java集合"><!---->Java集合<!----></a></li><li class="dropdown-item"><a href="/java/thread/java-thread-x-theorty.html" class="nav-link" aria-label="Java并发"><!---->Java并发<!----></a></li><li class="dropdown-item"><a href="/java/java8/java8-lambda.html" class="nav-link" aria-label="Java8"><!---->Java8<!----></a></li><li class="dropdown-item"><a href="/java/jvm/jvm-overview.html" class="nav-link" aria-label="JVM"><!---->JVM<!----></a></li></ul></button></div></div><div class="nav-item hide-in-mobile"><div class="dropdown-wrapper"><button class="dropdown-title" type="button" aria-label="数据库"><span class="title"><!---->数据库</span><span class="arrow"></span><ul class="nav-dropdown"><li class="dropdown-item"><a href="/db/sql/sql-x-basic.html" class="nav-link" aria-label="数据库基础/SQL基础"><!---->数据库基础/SQL基础<!----></a></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>Sql数据库</span></h4><ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/db/mysql/sql-mysql-overview.html" class="nav-link" aria-label="Mysql"><!---->Mysql<!----></a></li><li class="dropdown-subitem"><a href="/db/oracle/oracle-b-sequence.html" class="nav-link" aria-label="Oracle"><!---->Oracle<!----></a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>NoSql数据库</span></h4><ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/db/redis/db-redis-introduce.html" class="nav-link" aria-label="Redis"><!---->Redis<!----></a></li><li class="dropdown-subitem"><a href="/db/mongodb/mongo-x-basic.html" class="nav-link" aria-label="MongoDB"><!---->MongoDB<!----></a></li><li class="dropdown-subitem"><a href="/db/es/elasticsearch-x-introduce-1.html" class="nav-link" aria-label="Elasticsearch"><!---->Elasticsearch<!----></a></li><li class="dropdown-subitem"><a href="/db/neo4j/neo4j-x-tutorial.html" class="nav-link" aria-label="Neo4J"><!---->Neo4J<!----></a></li></ul></li></ul></button></div></div><div class="nav-item hide-in-mobile"><div class="dropdown-wrapper"><button class="dropdown-title" type="button" aria-label="框架|依赖"><span class="title"><!---->框架|依赖</span><span class="arrow"></span><ul class="nav-dropdown"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>Spring</span></h4><ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/dependencies/spring/spring-overview.html" class="nav-link" aria-label="Spring"><!---->Spring<!----></a></li><li class="dropdown-subitem"><a href="/dependencies/spring-boot/springboot-x-overview.html" class="nav-link" aria-label="SpringBoot"><!---->SpringBoot<!----></a></li></ul></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>ORM</span></h4><ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/dependencies/mybatis/mybatis-y-arch.html" class="nav-link" aria-label="Mybatis"><!---->Mybatis<!----></a></li><li class="dropdown-subitem"><a href="/dependencies/mybatis-plus/mybatis-plus-x-gen-code.html" class="nav-link" aria-label="Mybatis-Plus"><!---->Mybatis-Plus<!----></a></li></ul></li><li class="dropdown-item"><a href="/dependencies/office/office-x-aspose.html" class="nav-link" aria-label="Office文档操作"><!---->Office文档操作<!----></a></li><li class="dropdown-item"><a href="/dependencies/cas/cas-x-overview.html" class="nav-link" aria-label="CAS单点登录"><!---->CAS单点登录<!----></a></li></ul></button></div></div><div class="nav-item hide-in-mobile"><div class="dropdown-wrapper"><button class="dropdown-title" type="button" aria-label="开发|测试"><span class="title"><!---->开发|测试</span><span class="arrow"></span><ul class="nav-dropdown"><li class="dropdown-item"><a href="/develop/devlibrary/dev-lib-lombok.html" class="nav-link" aria-label="开发-常用类库"><!---->开发-常用类库<!----></a></li><li class="dropdown-item"><a href="/develop/security/dev-security-x-injection.html" class="nav-link" aria-label="开发-安全"><!---->开发-安全<!----></a></li><li class="dropdown-item"><a href="/develop/optimization/optimization-x-interface-optimization.html" class="nav-link" aria-label="开发 - 优化"><!---->开发 - 优化<!----></a></li><li class="dropdown-item"><a href="/develop/style/dev-qt-code-style.html" class="nav-link" aria-label="开发 - 规范/风格"><!---->开发 - 规范/风格<!----></a></li><li class="dropdown-item"><a href="/develop/test/ut-overview" class="nav-link" aria-label="测试"><!---->测试<!----></a></li></ul></button></div></div><div class="nav-item hide-in-mobile"><div class="dropdown-wrapper"><button class="dropdown-title" type="button" aria-label="软件|部署"><span class="title"><!---->软件|部署</span><span class="arrow"></span><ul class="nav-dropdown"><li class="dropdown-item"><a href="/deploy/docker/docker-basic-overview.html" class="nav-link" aria-label="Docker"><!---->Docker<!----></a></li><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>消息队列</span></h4><ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/deploy/mq/mq-a-overview.html" class="nav-link" aria-label="消息队列"><!---->消息队列<!----></a></li><li class="dropdown-subitem"><a href="/deploy/mq-rabbitmq/rabbitmq-x-overview.html" class="nav-link" aria-label="RabbitMQ"><!---->RabbitMQ<!----></a></li><li class="dropdown-subitem"><a href="/deploy/mq-kafka/kafka-x-overview.html" class="nav-link" aria-label="Kafka"><!---->Kafka<!----></a></li></ul></li><li class="dropdown-item"><a href="/deploy/skywalking/skywalking-x-principle.html" class="nav-link" aria-label="Skywalking"><!---->Skywalking<!----></a></li><li class="dropdown-item"><a href="/deploy/linux/linux-j-monitor-overview.html" class="nav-link" aria-label="Linux"><!---->Linux<!----></a></li><li class="dropdown-item"><a href="/deploy/jenkins/jenkins-overview.html" class="nav-link" aria-label="Jenkins"><!---->Jenkins<!----></a></li><li class="dropdown-item"><a href="/deploy/nginx/nginx-x-overview.html" class="nav-link" aria-label="Nginx"><!---->Nginx<!----></a></li><li class="dropdown-item"><a href="/deploy/deploy/docker-basic-overview" class="nav-link" aria-label="部署"><!---->部署<!----></a></li></ul></button></div></div><div class="nav-item hide-in-mobile"><div class="dropdown-wrapper"><button class="dropdown-title" type="button" aria-label="架构|系统"><span class="title"><!---->架构|系统</span><span class="arrow"></span><ul class="nav-dropdown"><li class="dropdown-item"><a href="/arch/base/arch-basic.html" class="nav-link" aria-label="架构基础"><!---->架构基础<!----></a></li><li class="dropdown-item"><a href="/arch/distributed/arch-id.html" class="nav-link" aria-label="分布式系统"><!---->分布式系统<!----></a></li><li class="dropdown-item"><a href="/arch/microservices/ms-overview.html" class="nav-link" aria-label="微服务"><!---->微服务<!----></a></li><li class="dropdown-item"><a href="/arch/minio/minio-concept.html" class="nav-link" aria-label="对象存储-Minio"><!---->对象存储-Minio<!----></a></li><li class="dropdown-item"><a href="/arch/manage-system/manage-system-technical-selection.html" class="nav-link" aria-label="后台管理系统"><!---->后台管理系统<!----></a></li><li class="dropdown-item"><a href="/arch/mall/mall-sku.html" class="nav-link" aria-label="商城设计"><!---->商城设计<!----></a></li></ul></button></div></div><div class="nav-item hide-in-mobile"><div class="dropdown-wrapper"><button class="dropdown-title" type="button" aria-label="软件|资源|教程"><span class="title"><!---->软件|资源|教程</span><span class="arrow"></span><ul class="nav-dropdown"><li class="dropdown-item"><a href="/softSource/Office%E7%B3%BB%E5%88%97.html" class="nav-link" aria-label="Office系列"><!---->Office系列<!----></a></li><li class="dropdown-item"><a href="/softSource/Adobe%E7%B3%BB%E5%88%97.html" class="nav-link" aria-label="Adobe系列"><!---->Adobe系列<!----></a></li><li class="dropdown-item"><a href="/softSource/jetBrains%E7%B3%BB%E5%88%97.html" class="nav-link" aria-label="jetBrains系列"><!---->jetBrains系列<!----></a></li><li class="dropdown-item"><a href="/softSource/%E8%BF%9C%E7%A8%8B%E9%93%BE%E6%8E%A5%E5%B7%A5%E5%85%B7.html" class="nav-link" aria-label="远程链接工具"><!---->远程链接工具<!----></a></li><li class="dropdown-item"><a href="/softSource/%E4%BA%B2%E6%B5%8B%E5%A5%BD%E7%94%A8%E5%B7%A5%E5%85%B7.html" class="nav-link" aria-label="亲测好用工具"><!---->亲测好用工具<!----></a></li><li class="dropdown-item"><a href="/softSource/overWall.html" class="nav-link" aria-label="overWall"><!---->overWall<!----></a></li></ul></button></div></div><div class="nav-item hide-in-mobile"><div class="dropdown-wrapper"><button class="dropdown-title" type="button" aria-label="语言|平台"><span class="title"><!---->语言|平台</span><span class="arrow"></span><ul class="nav-dropdown"><li class="dropdown-item"><a href="/language/frontend-layout/flex-layout-overview.html" class="nav-link" aria-label="前端"><!---->前端<!----></a></li><li class="dropdown-item"><a href="/language/python/python-advantage.html" class="nav-link" aria-label="python"><!---->python<!----></a></li><li class="dropdown-item"><a href="/language/weixin/wx-package-Optimization.html" class="nav-link" aria-label="微信"><!---->微信<!----></a></li><li class="dropdown-item"><a href="/language/ai/knowledge-graph-build.html" class="nav-link" aria-label="AI人工智能"><!---->AI人工智能<!----></a></li></ul></button></div></div><div class="nav-item hide-in-mobile"><div class="dropdown-wrapper"><button class="dropdown-title" type="button" aria-label="杂项|思考"><span class="title"><!---->杂项|思考</span><span class="arrow"></span><ul class="nav-dropdown"><li class="dropdown-item"><a href="/think/deepImpression/redis-bigdata-slow-problem.html" class="nav-link" aria-label="印象深刻bug"><!---->印象深刻bug<!----></a></li><li class="dropdown-item"><a href="/think/optimization/optimization-x-frequent-operation-db.html" class="nav-link" aria-label="优化"><!---->优化<!----></a></li><li class="dropdown-item"><a href="/think/misc/misc-x-middleware.html" class="nav-link" aria-label="杂项"><!---->杂项<!----></a></li><li class="dropdown-item"><a href="/think/%E4%BA%BA%E7%94%9F%E6%80%9D%E8%80%83.html" class="nav-link" aria-label="人生思考"><!---->人生思考<!----></a></li><li class="dropdown-item"><a href="/think/%E8%AF%BB%E4%B9%A6%E6%80%BB%E7%BB%93.html" class="nav-link" aria-label="读书总结"><!---->读书总结<!----></a></li><li class="dropdown-item"><a href="/think/%E5%8D%9A%E5%A3%AB%E7%94%B3%E8%AF%B7%E5%87%86%E5%A4%87.html" class="nav-link" aria-label="博士申请准备"><!---->博士申请准备<!----></a></li><li class="dropdown-item"><a href="/think/%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93.html" class="nav-link" aria-label="工作总结"><!---->工作总结<!----></a></li></ul></button></div></div><div class="nav-item hide-in-mobile"><div class="dropdown-wrapper"><button class="dropdown-title" type="button" aria-label="关于我"><span class="title"><!---->关于我</span><span class="arrow"></span><ul class="nav-dropdown"><li class="dropdown-item"><a href="/about/Resume.html" class="nav-link" aria-label="个人经历|简历"><!---->个人经历|简历<!----></a></li><li class="dropdown-item"><a href="/about/CurrentDoing.html" class="nav-link" aria-label="目前正做"><!---->目前正做<!----></a></li><li class="dropdown-item"><a href="/about/FuturePlan.html" class="nav-link" aria-label="未来规划"><!---->未来规划<!----></a></li></ul></button></div></div></nav><!--[--><!----><!--]--></div><div class="navbar-right"><!--[--><!----><!--]--><!----><!----><div class="nav-item hide-in-mobile"><button id="appearance-switch"><svg xmlns="http://www.w3.org/2000/svg" class="icon auto-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="auto icon" style="display:block;"><path d="M512 992C246.92 992 32 777.08 32 512S246.92 32 512 32s480 214.92 480 480-214.92 480-480 480zm0-840c-198.78 0-360 161.22-360 360 0 198.84 161.22 360 360 360s360-161.16 360-360c0-198.78-161.22-360-360-360zm0 660V212c165.72 0 300 134.34 300 300 0 165.72-134.28 300-300 300z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon dark-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="dark icon" style="display:none;"><path d="M524.8 938.667h-4.267a439.893 439.893 0 0 1-313.173-134.4 446.293 446.293 0 0 1-11.093-597.334A432.213 432.213 0 0 1 366.933 90.027a42.667 42.667 0 0 1 45.227 9.386 42.667 42.667 0 0 1 10.24 42.667 358.4 358.4 0 0 0 82.773 375.893 361.387 361.387 0 0 0 376.747 82.774 42.667 42.667 0 0 1 54.187 55.04 433.493 433.493 0 0 1-99.84 154.88 438.613 438.613 0 0 1-311.467 128z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon light-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="light icon" style="display:none;"><path d="M952 552h-80a40 40 0 0 1 0-80h80a40 40 0 0 1 0 80zM801.88 280.08a41 41 0 0 1-57.96-57.96l57.96-58a41.04 41.04 0 0 1 58 58l-58 57.96zM512 752a240 240 0 1 1 0-480 240 240 0 0 1 0 480zm0-560a40 40 0 0 1-40-40V72a40 40 0 0 1 80 0v80a40 40 0 0 1-40 40zm-289.88 88.08-58-57.96a41.04 41.04 0 0 1 58-58l57.96 58a41 41 0 0 1-57.96 57.96zM192 512a40 40 0 0 1-40 40H72a40 40 0 0 1 0-80h80a40 40 0 0 1 40 40zm30.12 231.92a41 41 0 0 1 57.96 57.96l-57.96 58a41.04 41.04 0 0 1-58-58l58-57.96zM512 832a40 40 0 0 1 40 40v80a40 40 0 0 1-80 0v-80a40 40 0 0 1 40-40zm289.88-88.08 58 57.96a41.04 41.04 0 0 1-58 58l-57.96-58a41 41 0 0 1 57.96-57.96z"></path></svg></button></div><div id="docsearch-container"></div><!--[--><!----><!--]--><button class="toggle-navbar-button" aria-label="Toggle Navbar" aria-expanded="false" aria-controls="nav-screen"><span class="button-container"><span class="button-top"></span><span class="button-middle"></span><span class="button-bottom"></span></span></button></div></header><!----><!--]--><!----><div class="toggle-sidebar-wrapper"><span class="arrow left"></span></div><aside class="sidebar"><!--[--><!----><!--]--><ul class="sidebar-links"><li><!--[--><a href="/JavaSE/Java8.html" class="nav-link sidebar-link sidebar-page" aria-label="/JavaSE/Java8.md"><!---->/JavaSE/Java8.md<!----></a><ul class="sidebar-sub-headers"></ul><!--]--></li><li><!--[--><a href="/JavaSE/Java%E5%B9%B6%E5%8F%91.html" class="nav-link sidebar-link sidebar-page" aria-label="/JavaSE/Java并发.md"><!---->/JavaSE/Java并发.md<!----></a><ul class="sidebar-sub-headers"></ul><!--]--></li><li><!--[--><a href="/JavaSE/Java%E9%9B%86%E5%90%88.html" class="nav-link sidebar-link sidebar-page" aria-label="/JavaSE/Java集合.md"><!---->/JavaSE/Java集合.md<!----></a><ul class="sidebar-sub-headers"></ul><!--]--></li><li><!--[--><a href="/JavaSE/JavaIO.html" class="nav-link sidebar-link sidebar-page" aria-label="/JavaSE/JavaIO.md"><!---->/JavaSE/JavaIO.md<!----></a><ul class="sidebar-sub-headers"></ul><!--]--></li><li><!--[--><a href="/JavaSE/JavaWeb.html" class="nav-link sidebar-link sidebar-page" aria-label="/JavaSE/JavaWeb.md"><!---->/JavaSE/JavaWeb.md<!----></a><ul class="sidebar-sub-headers"></ul><!--]--></li><li><!--[--><a href="/JavaSE/JVM.html" class="nav-link sidebar-link sidebar-page" aria-label="/JavaSE/JVM.md"><!---->/JavaSE/JVM.md<!----></a><ul class="sidebar-sub-headers"></ul><!--]--></li><li><!--[--><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html" class="router-link-active router-link-exact-active nav-link active sidebar-link sidebar-page active" aria-label="Java基础语法"><!---->Java基础语法<!----></a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_1、java概述" class="router-link-active router-link-exact-active nav-link sidebar-link heading" aria-label="1、Java概述"><!---->1、Java概述<!----></a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_1-1-java的起源" class="router-link-active router-link-exact-active nav-link sidebar-link heading" aria-label="1.1 Java的起源"><!---->1.1 Java的起源<!----></a><ul class="sidebar-sub-headers"></ul></li><li class="sidebar-sub-header"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_1-2-jdk是什么-jre又是什么-java为什么具有跨平台性-java如何配置环境变量" class="router-link-active router-link-exact-active nav-link sidebar-link heading" aria-label="1.2 JDK是什么？JRE又是什么？java为什么具有跨平台性？Java如何配置环境变量"><!---->1.2 JDK是什么？JRE又是什么？java为什么具有跨平台性？Java如何配置环境变量<!----></a><ul class="sidebar-sub-headers"></ul></li><li class="sidebar-sub-header"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_1-3-java通过什么进行编译-notepad-、idea" class="router-link-active router-link-exact-active nav-link sidebar-link heading" aria-label="1.3 Java通过什么进行编译（NotePad++ 、idea）"><!---->1.3 Java通过什么进行编译（NotePad++ 、idea）<!----></a><ul class="sidebar-sub-headers"></ul></li></ul></li><li class="sidebar-sub-header"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_2、java的第一个程序" class="router-link-active router-link-exact-active nav-link sidebar-link heading" aria-label="2、Java的第一个程序"><!---->2、Java的第一个程序<!----></a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_2-1-第一个helloworld程序" class="router-link-active router-link-exact-active nav-link sidebar-link heading" aria-label="2.1  第一个HelloWorld程序"><!---->2.1  第一个HelloWorld程序<!----></a><ul class="sidebar-sub-headers"></ul></li><li class="sidebar-sub-header"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_2-2-注释" class="router-link-active router-link-exact-active nav-link sidebar-link heading" aria-label="2.2 注释"><!---->2.2 注释<!----></a><ul class="sidebar-sub-headers"></ul></li><li class="sidebar-sub-header"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_2-3-关键字" class="router-link-active router-link-exact-active nav-link sidebar-link heading" aria-label="2.3 关键字"><!---->2.3 关键字<!----></a><ul class="sidebar-sub-headers"></ul></li><li class="sidebar-sub-header"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_2-4-常量" class="router-link-active router-link-exact-active nav-link sidebar-link heading" aria-label="2.4  常量"><!---->2.4  常量<!----></a><ul class="sidebar-sub-headers"></ul></li><li class="sidebar-sub-header"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_2-5-java的基本数据类型" class="router-link-active router-link-exact-active nav-link sidebar-link heading" aria-label="2.5   Java的基本数据类型"><!---->2.5   Java的基本数据类型<!----></a><ul class="sidebar-sub-headers"></ul></li><li class="sidebar-sub-header"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_2-6-变量" class="router-link-active router-link-exact-active nav-link sidebar-link heading" aria-label="2.6 变量"><!---->2.6 变量<!----></a><ul class="sidebar-sub-headers"></ul></li><li class="sidebar-sub-header"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_2-7-标识符" class="router-link-active router-link-exact-active nav-link sidebar-link heading" aria-label="2.7 标识符"><!---->2.7 标识符<!----></a><ul class="sidebar-sub-headers"></ul></li><li class="sidebar-sub-header"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_2-8-java基本数据类型转换" class="router-link-active router-link-exact-active nav-link sidebar-link heading" aria-label="2.8 java基本数据类型转换"><!---->2.8 java基本数据类型转换<!----></a><ul class="sidebar-sub-headers"></ul></li><li class="sidebar-sub-header"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_1-1-算数运算符" class="router-link-active router-link-exact-active nav-link sidebar-link heading" aria-label="1.1 算数运算符"><!---->1.1 算数运算符<!----></a><ul class="sidebar-sub-headers"></ul></li><li class="sidebar-sub-header"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_1-2-赋值运算符" class="router-link-active router-link-exact-active nav-link sidebar-link heading" aria-label="1.2 赋值运算符"><!---->1.2 赋值运算符<!----></a><ul class="sidebar-sub-headers"></ul></li><li class="sidebar-sub-header"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_1-3-关系运算符" class="router-link-active router-link-exact-active nav-link sidebar-link heading" aria-label="1.3 关系运算符"><!---->1.3 关系运算符<!----></a><ul class="sidebar-sub-headers"></ul></li><li class="sidebar-sub-header"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_1-4-逻辑运算符" class="router-link-active router-link-exact-active nav-link sidebar-link heading" aria-label="1.4  逻辑运算符"><!---->1.4  逻辑运算符<!----></a><ul class="sidebar-sub-headers"></ul></li><li class="sidebar-sub-header"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_1-5-三元运算符" class="router-link-active router-link-exact-active nav-link sidebar-link heading" aria-label="1.5   三元运算符"><!---->1.5   三元运算符<!----></a><ul class="sidebar-sub-headers"></ul></li><li class="sidebar-sub-header"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#if语句" class="router-link-active router-link-exact-active nav-link sidebar-link heading" aria-label="if语句"><!---->if语句<!----></a><ul class="sidebar-sub-headers"></ul></li><li class="sidebar-sub-header"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#switch语句" class="router-link-active router-link-exact-active nav-link sidebar-link heading" aria-label="switch语句"><!---->switch语句<!----></a><ul class="sidebar-sub-headers"></ul></li><li class="sidebar-sub-header"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#for循环结构" class="router-link-active router-link-exact-active nav-link sidebar-link heading" aria-label="for循环结构"><!---->for循环结构<!----></a><ul class="sidebar-sub-headers"></ul></li><li class="sidebar-sub-header"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#while循环" class="router-link-active router-link-exact-active nav-link sidebar-link heading" aria-label="while循环"><!---->while循环<!----></a><ul class="sidebar-sub-headers"></ul></li><li class="sidebar-sub-header"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#do-while循环" class="router-link-active router-link-exact-active nav-link sidebar-link heading" aria-label="do  While循环"><!---->do  While循环<!----></a><ul class="sidebar-sub-headers"></ul></li><li class="sidebar-sub-header"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#循环嵌套概述" class="router-link-active router-link-exact-active nav-link sidebar-link heading" aria-label="循环嵌套概述："><!---->循环嵌套概述：<!----></a><ul class="sidebar-sub-headers"></ul></li></ul></li><li class="sidebar-sub-header"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_4、生成随机数" class="router-link-active router-link-exact-active nav-link sidebar-link heading" aria-label="4、生成随机数"><!---->4、生成随机数<!----></a><ul class="sidebar-sub-headers"></ul></li><li class="sidebar-sub-header"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_1-数组" class="router-link-active router-link-exact-active nav-link sidebar-link heading" aria-label="1 数组"><!---->1 数组<!----></a><ul class="sidebar-sub-headers"></ul></li><li class="sidebar-sub-header"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_1-2-数组的索引" class="router-link-active router-link-exact-active nav-link sidebar-link heading" aria-label="1.2 数组的索引"><!---->1.2 数组的索引<!----></a><ul class="sidebar-sub-headers"></ul></li><li class="sidebar-sub-header"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_1-3-for循环遍历数组" class="router-link-active router-link-exact-active nav-link sidebar-link heading" aria-label="1.3 for循环遍历数组"><!---->1.3 for循环遍历数组<!----></a><ul class="sidebar-sub-headers"></ul></li></ul><!--]--></li></ul><!--[--><!----><!--]--></aside><!--[--><main class="page" id="main-content"><!--[--><!----><nav class="breadcrumb disable"></nav><div class="page-title"><h1><!---->Java基础语法</h1><div class="page-info"><span class="author-info" aria-label="作者🖊" data-balloon-pos="down"><svg xmlns="http://www.w3.org/2000/svg" class="icon author-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="author icon"><path d="M649.6 633.6c86.4-48 147.2-144 147.2-249.6 0-160-128-288-288-288s-288 128-288 288c0 108.8 57.6 201.6 147.2 249.6-121.6 48-214.4 153.6-240 288-3.2 9.6 0 19.2 6.4 25.6 3.2 9.6 12.8 12.8 22.4 12.8h704c9.6 0 19.2-3.2 25.6-12.8 6.4-6.4 9.6-16 6.4-25.6-25.6-134.4-121.6-240-243.2-288z"></path></svg><span><span class="author-item">李龙</span></span><span property="author" content="李龙"></span></span><!----><span class="date-info" aria-label="写作日期📅" data-balloon-pos="down"><svg xmlns="http://www.w3.org/2000/svg" class="icon calendar-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="calendar icon"><path d="M716.4 110.137c0-18.753-14.72-33.473-33.472-33.473-18.753 0-33.473 14.72-33.473 33.473v33.473h66.993v-33.473zm-334.87 0c0-18.753-14.72-33.473-33.473-33.473s-33.52 14.72-33.52 33.473v33.473h66.993v-33.473zm468.81 33.52H716.4v100.465c0 18.753-14.72 33.473-33.472 33.473a33.145 33.145 0 01-33.473-33.473V143.657H381.53v100.465c0 18.753-14.72 33.473-33.473 33.473a33.145 33.145 0 01-33.473-33.473V143.657H180.6A134.314 134.314 0 0046.66 277.595v535.756A134.314 134.314 0 00180.6 947.289h669.74a134.36 134.36 0 00133.94-133.938V277.595a134.314 134.314 0 00-133.94-133.938zm33.473 267.877H147.126a33.145 33.145 0 01-33.473-33.473c0-18.752 14.72-33.473 33.473-33.473h736.687c18.752 0 33.472 14.72 33.472 33.473a33.145 33.145 0 01-33.472 33.473z"></path></svg><span><!----></span><meta property="datePublished" content="2021-12-11T16:00:00.000Z"></span><!----><!----><span class="reading-time-info" aria-label="阅读时间⌛" data-balloon-pos="down"><svg xmlns="http://www.w3.org/2000/svg" class="icon timer-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="timer icon"><path d="M799.387 122.15c4.402-2.978 7.38-7.897 7.38-13.463v-1.165c0-8.933-7.38-16.312-16.312-16.312H256.33c-8.933 0-16.311 7.38-16.311 16.312v1.165c0 5.825 2.977 10.874 7.637 13.592 4.143 194.44 97.22 354.963 220.201 392.763-122.204 37.542-214.893 196.511-220.2 389.397-4.661 5.049-7.638 11.651-7.638 19.03v5.825h566.49v-5.825c0-7.379-2.849-13.981-7.509-18.9-5.049-193.016-97.867-351.985-220.2-389.527 123.24-37.67 216.446-198.453 220.588-392.892zM531.16 450.445v352.632c117.674 1.553 211.787 40.778 211.787 88.676H304.097c0-48.286 95.149-87.382 213.728-88.676V450.445c-93.077-3.107-167.901-81.297-167.901-177.093 0-8.803 6.99-15.793 15.793-15.793 8.803 0 15.794 6.99 15.794 15.793 0 80.261 63.69 145.635 142.01 145.635s142.011-65.374 142.011-145.635c0-8.803 6.99-15.793 15.794-15.793s15.793 6.99 15.793 15.793c0 95.019-73.789 172.82-165.96 177.093z"></path></svg><span>大约 17 分钟</span><meta property="timeRequired" content="PT17M"></span></div><hr></div><div class="toc-place-holder"><aside id="toc"><div class="toc-header">此页内容</div><div class="toc-wrapper"><ul class="toc-list"><!--[--><li class="toc-item"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_1、java概述" class="router-link-active router-link-exact-active toc-link level2">1、Java概述</a></li><ul class="toc-list"><!--[--><li class="toc-item"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_1-1-java的起源" class="router-link-active router-link-exact-active toc-link level3">1.1 Java的起源</a></li><!----><!--]--><!--[--><li class="toc-item"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_1-2-jdk是什么-jre又是什么-java为什么具有跨平台性-java如何配置环境变量" class="router-link-active router-link-exact-active toc-link level3">1.2 JDK是什么？JRE又是什么？java为什么具有跨平台性？Java如何配置环境变量</a></li><!----><!--]--><!--[--><li class="toc-item"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_1-3-java通过什么进行编译-notepad-、idea" class="router-link-active router-link-exact-active toc-link level3">1.3 Java通过什么进行编译（NotePad++ 、idea）</a></li><!----><!--]--></ul><!--]--><!--[--><li class="toc-item"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_2、java的第一个程序" class="router-link-active router-link-exact-active toc-link level2">2、Java的第一个程序</a></li><ul class="toc-list"><!--[--><li class="toc-item"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_2-1-第一个helloworld程序" class="router-link-active router-link-exact-active toc-link level3">2.1  第一个HelloWorld程序</a></li><!----><!--]--><!--[--><li class="toc-item"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_2-2-注释" class="router-link-active router-link-exact-active toc-link level3">2.2 注释</a></li><!----><!--]--><!--[--><li class="toc-item"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_2-3-关键字" class="router-link-active router-link-exact-active toc-link level3">2.3 关键字</a></li><!----><!--]--><!--[--><li class="toc-item"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_2-4-常量" class="router-link-active router-link-exact-active toc-link level3">2.4  常量</a></li><!----><!--]--><!--[--><li class="toc-item"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_2-5-java的基本数据类型" class="router-link-active router-link-exact-active toc-link level3">2.5   Java的基本数据类型</a></li><!----><!--]--><!--[--><li class="toc-item"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_2-6-变量" class="router-link-active router-link-exact-active toc-link level3">2.6 变量</a></li><!----><!--]--><!--[--><li class="toc-item"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_2-7-标识符" class="router-link-active router-link-exact-active toc-link level3">2.7 标识符</a></li><!----><!--]--><!--[--><li class="toc-item"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_2-8-java基本数据类型转换" class="router-link-active router-link-exact-active toc-link level3">2.8 java基本数据类型转换</a></li><!----><!--]--><!--[--><li class="toc-item"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_1-1-算数运算符" class="router-link-active router-link-exact-active toc-link level3">1.1 算数运算符</a></li><!----><!--]--><!--[--><li class="toc-item"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_1-2-赋值运算符" class="router-link-active router-link-exact-active toc-link level3">1.2 赋值运算符</a></li><!----><!--]--><!--[--><li class="toc-item"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_1-3-关系运算符" class="router-link-active router-link-exact-active toc-link level3">1.3 关系运算符</a></li><!----><!--]--><!--[--><li class="toc-item"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_1-4-逻辑运算符" class="router-link-active router-link-exact-active toc-link level3">1.4  逻辑运算符</a></li><!----><!--]--><!--[--><li class="toc-item"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_1-5-三元运算符" class="router-link-active router-link-exact-active toc-link level3">1.5   三元运算符</a></li><!----><!--]--><!--[--><li class="toc-item"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#if语句" class="router-link-active router-link-exact-active toc-link level3">if语句</a></li><!----><!--]--><!--[--><li class="toc-item"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#switch语句" class="router-link-active router-link-exact-active toc-link level3">switch语句</a></li><!----><!--]--><!--[--><li class="toc-item"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#for循环结构" class="router-link-active router-link-exact-active toc-link level3">for循环结构</a></li><!----><!--]--><!--[--><li class="toc-item"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#while循环" class="router-link-active router-link-exact-active toc-link level3">while循环</a></li><!----><!--]--><!--[--><li class="toc-item"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#do-while循环" class="router-link-active router-link-exact-active toc-link level3">do  While循环</a></li><!----><!--]--><!--[--><li class="toc-item"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#循环嵌套概述" class="router-link-active router-link-exact-active toc-link level3">循环嵌套概述：</a></li><!----><!--]--></ul><!--]--><!--[--><li class="toc-item"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_4、生成随机数" class="router-link-active router-link-exact-active toc-link level2">4、生成随机数</a></li><!----><!--]--><!--[--><li class="toc-item"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_1-数组" class="router-link-active router-link-exact-active toc-link level2">1 数组</a></li><!----><!--]--><!--[--><li class="toc-item"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_1-2-数组的索引" class="router-link-active router-link-exact-active toc-link level2">1.2 数组的索引</a></li><!----><!--]--><!--[--><li class="toc-item"><a aria-current="page" href="/JavaSE/Java%E5%9F%BA%E7%A1%80.html#_1-3-for循环遍历数组" class="router-link-active router-link-exact-active toc-link level2">1.3 for循环遍历数组</a></li><!----><!--]--></ul></div></aside></div><!----><div class="theme-hope-content"><h1 id="day01-java基础语法" tabindex="-1"><a class="header-anchor" href="#day01-java基础语法" aria-hidden="true">#</a> day01 -Java基础语法</h1><h2 id="_1、java概述" tabindex="-1"><a class="header-anchor" href="#_1、java概述" aria-hidden="true">#</a> 1、Java概述</h2><h3 id="_1-1-java的起源" tabindex="-1"><a class="header-anchor" href="#_1-1-java的起源" aria-hidden="true">#</a> 1.1 Java的起源</h3><p>​ 语言：计算机有自己独特的语言：比如，java、C（面向过程）C++ （C plus plus cpp）Python、go语言、ruby、erlang、scla</p><p>​ java语言：java语言的由来 詹姆斯·高斯林（James Gosling）</p><p>​ 图灵奖：姚期智 获取图灵奖 （计算机方面的最高奖项，图灵 是一个人，发明计算机）</p><p>跨平台： java 实际上是 jdk这个工具具有跨平台性，jdk可以安装在不同的系统上面</p><p>​ 平台：Windows系统</p><p>​ mac系统</p><p>​ linux系系统</p><h3 id="_1-2-jdk是什么-jre又是什么-java为什么具有跨平台性-java如何配置环境变量" tabindex="-1"><a class="header-anchor" href="#_1-2-jdk是什么-jre又是什么-java为什么具有跨平台性-java如何配置环境变量" aria-hidden="true">#</a> 1.2 JDK是什么？JRE又是什么？java为什么具有跨平台性？Java如何配置环境变量</h3><p>​ JRE：JRE就是JDK里面的编译工具，把java语言，编译成了.class文件</p><p>​ JDK：JDK相当于一些列的工具集，里面包含有JRE、javac javap</p><p>​ JVM: java虚拟机,具有跨平台性,把.class 文件 进行加载、翻译、执行 变成====》计算机可以识别的 二进制 0101010 （字节码）</p><h3 id="_1-3-java通过什么进行编译-notepad-、idea" tabindex="-1"><a class="header-anchor" href="#_1-3-java通过什么进行编译-notepad-、idea" aria-hidden="true">#</a> 1.3 Java通过什么进行编译（NotePad++ 、idea）</h3><p>​ 1.4 动手操作部分</p><ul><li>安装绿色版的JDK1.8 （环境变量的配置）</li><li>安装NotePad++ (记事本Puls)</li><li>idea（强大的Java编译工具,对idea的破解）</li></ul><h2 id="_2、java的第一个程序" tabindex="-1"><a class="header-anchor" href="#_2、java的第一个程序" aria-hidden="true">#</a> 2、Java的第一个程序</h2><p>​ 2.1 Dos命令(和linux系统是有一定区别)</p><p>在Windows系统下</p><table><thead><tr><th>操作</th><th>说明</th></tr></thead><tbody><tr><td>切换盘符</td><td>盘符切换。d:回车，表示切换到d盘</td></tr><tr><td>查看所有的文件</td><td>dir</td></tr><tr><td>进入某一个文件</td><td>cd 文件名称</td></tr><tr><td>退出某一个文件</td><td>cd ..</td></tr><tr><td>进入多级目录</td><td>cd \aa\bb</td></tr><tr><td>清屏</td><td>cls</td></tr><tr><td>进入根目录</td><td>cd \</td></tr><tr><td>退出</td><td>exit</td></tr></tbody></table><p>在Idea中新建文件步骤： 1、先创建一个项目，找到Create new Project 2、新建一个空工程 empty Project 新建一个实际的项目</p><p>​ 在空文件夹下面</p><p>​ project(项目 ，空文件夹)</p><p>​ module1（项目一）</p><p>​ module2（项目二）</p><h3 id="_2-1-第一个helloworld程序" tabindex="-1"><a class="header-anchor" href="#_2-1-第一个helloworld程序" aria-hidden="true">#</a> 2.1 第一个HelloWorld程序</h3><p>​ 规则：(阿里巴巴规范)</p><p>​ 包名：其实也是一个文件夹，命名规则：都是小写字母，一般使用所在公司的网址 倒写</p><p>​ 类名： 也是需要自己定义，首字母需要大写</p><p>​ 方法名：</p><h3 id="_2-2-注释" tabindex="-1"><a class="header-anchor" href="#_2-2-注释" aria-hidden="true">#</a> 2.2 注释</h3><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>//什么是注释？   对一段代码进行解释说明  
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>注释的分类：</p><ul><li><mark>单行注释 // ctrl+/ 定位到需要注释代码的当前行</mark></li><li><mark>多行注释 /* dshifaof*/ Ctrl+shift+/ 此时需要选中 被注释的代码</mark></li><li>文档注释 /** fsdahifds */</li></ul><p>注意：单行注释 可以进行嵌套</p><p>​ 多行注释 是否可以嵌套多行注释呢？</p><p>​ 多行注释，不能嵌套多行注释 可以嵌套单行注释</p><p>注释：被注释的代码或者文字，不会被编译器编译、解释</p><h3 id="_2-3-关键字" tabindex="-1"><a class="header-anchor" href="#_2-3-关键字" aria-hidden="true">#</a> 2.3 关键字</h3><p>什么是关键字， 关键字其实就是jdk里面自带的，不需要认为的自己定义，jdk1.8 里面 有很多的jar包 这些都是java官方自己提供的，不需要使用者自己定义。</p><p>特点：</p><ul><li>所有的关键字都是小写</li><li>关键字在idea编译器中，都会高亮显示，例如第一个Helloworld程序中的public class static 等</li></ul><div class="language-java line-numbers-mode" data-ext="java"><pre class="language-java"><code><span class="token keyword">package</span> <span class="token namespace">cn<span class="token punctuation">.</span>ygtong</span><span class="token punctuation">;</span>
+
+<span class="token doc-comment comment">/**
+ * Created with IntelliJ IDEA.
+ *
+ * @Author: lilong329329@163.com
+ * @Date: 2021/07/06/16:10
+ * @Description: 此编辑页面是做社么得
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test1</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;HelloWorld&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//什么是注释？   //对一段代码进行解释说明</span>
+
+        <span class="token comment">/*fdsajff dsf as fds
+                //fdsaiofnas
+
+         */</span>
+
+        <span class="token comment">//System.out.println(&quot;fdsaafasf &quot;);</span>
+      <span class="token comment">/*  System.out.println(&quot;fadskfa fadsf dsah f&quot;);
+        fdashifasd fdsafjo
+                jfadsfdsa
+                        jsdakgsad */</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="_2-4-常量" tabindex="-1"><a class="header-anchor" href="#_2-4-常量" aria-hidden="true">#</a> 2.4 常量</h3><p>​ 概念：在程序运行过程中，值不会发生改变</p><p>常量的分类：</p><p>​ 字符串常量 例 “发大水发你双方都” “ab”</p><p>​ 字符常量：‘a’ ‘b’</p><p>​ 整型常量 23 -12 55</p><p>​ 小数常量：0.1 2.3</p><p>​ 布尔常量： true false 对 错</p><h3 id="_2-5-java的基本数据类型" tabindex="-1"><a class="header-anchor" href="#_2-5-java的基本数据类型" aria-hidden="true">#</a> 2.5 Java的基本数据类型</h3><p>​ 计算机最小的信息单元 bit</p><p>​ 计算机最小的存储单元 ：byte</p><p>换算关系：</p><p>​ 1byte = 8bit位</p><p>byte kb mb gb Tb pb 。。。。换算关系</p><p>1kb = 1024byte</p><p>mb = 1024kb</p><p>gb = 1024mb</p><p>tb = 1024gb</p><p>pb = 1024tb</p><p>计算机组成原理里面：</p><p>​ 01010110 换算成10进制 0<em>20 +1</em></p><p>​</p><p><mark>java的基本数据类型</mark></p><table><thead><tr><th>类型</th><th>（内存占用）</th><th>取值范围</th></tr></thead><tbody><tr><td>byte 字节</td><td>1</td><td>（-128） - 127</td></tr><tr><td>short （短整型）</td><td>2</td><td></td></tr><tr><td>int （整型）</td><td>4</td><td></td></tr><tr><td>long（长整形）</td><td>8</td><td></td></tr><tr><td>float （1.3L 此时表示是float类型的）</td><td>4</td><td></td></tr><tr><td>double （1.3 默认是double类型的）</td><td>8</td><td></td></tr><tr><td>char （‘ ’）</td><td>2</td><td></td></tr><tr><td>boolean （true false）</td><td>1</td><td></td></tr><tr><td></td><td></td><td></td></tr></tbody></table><h3 id="_2-6-变量" tabindex="-1"><a class="header-anchor" href="#_2-6-变量" aria-hidden="true">#</a> 2.6 变量</h3><ul><li>变量的定义格式： 基本数据类型 变量名 = 初始值； （变量名，其中变量名可以自己定义）</li></ul><p>需要会的：变量的定义 然后使用，并在控制台上进行打印输出</p><p>回顾：</p><ol><li>java发展历史 java之父 高斯林 常见的编程语言 ：C C++、Python、java、erlang</li><li><mark>jdk1.8的安装 和环境变量的配置</mark> （实在实在不会了，利用百度，自己手动操作一下如何配置jdk的环境变量）</li><li><mark>idea2020.1 版本的安装和激活破解</mark></li><li>利用idea第一个Helloworld代码的编写 1.如何创建项目 创建empty Project Module(项目) 2 .包名的创建规则 3.类名的创建规则，首字母大写</li><li>注释 （单行注释、多行注释、文档注释）</li><li>关键字 关键字是java公司自己提供的，不需要人为的定义、都是小写，而且在编译器中高亮显示 public static void 等都是关键字。</li><li>常量 (字符串常量、字符常量、小数常量、整数常量、布尔常量等) 值不会发生改变的量，就叫做常量</li><li><mark>java中的数据类型：分为两种，基本数据类型，引用数据类型（String、集合等等）</mark></li><li>java中的基本数据类型（四类八种） <ol><li>整型：byte（1） short（2） int （4） long （8） 整型：默认是int类型</li><li>小数： float（4） double(8) 默认：double类型</li><li>字符类型：char（2）</li><li>布尔类型：boolean (1) 默认值：false</li></ol></li><li>变量： <ol><li>变量的定义格式：</li></ol></li></ol><div class="language-java line-numbers-mode" data-ext="java"><pre class="language-java"><code>基本数据类型 变量的名字<span class="token punctuation">(</span>可以自己随意定义，但是尽量做到见名知意<span class="token punctuation">)</span> <span class="token operator">=</span> 初始值<span class="token punctuation">;</span>   <span class="token comment">//分号表示 语句结束</span>
+举例：
+    <span class="token keyword">int</span> num  <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>   <span class="token comment">//实际读法：把10 赋值给整型变量 num</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>今日：</p><h3 id="_2-7-标识符" tabindex="-1"><a class="header-anchor" href="#_2-7-标识符" aria-hidden="true">#</a> 2.7 标识符</h3><p>​ 概念：用户自己给 类、方法、变量、常量等自己定义的名字</p><p>标识符命名规则：</p><p>​ 1、标识符命名是由大小写字母、数字、下划线、$（英文状态下的美元符号）组成。</p><p>​ <mark>其中</mark> 标识符的首字母不能是 数字</p><p>​ 标识符不能使用关键字、保留字（现在java中暂时没有使用，未来可能会使用的 goto 、const）</p><p>​ ==<mark>第一个字符可以是下划线或者$美元符号（确定）</mark></p><p>​ 标识符 不能使用两个单词 中间 有空格 a b</p><p>例子：</p><div class="language-java line-numbers-mode" data-ext="java"><pre class="language-java"><code><span class="token keyword">package</span> <span class="token namespace">cn<span class="token punctuation">.</span>jiupai<span class="token punctuation">.</span>day01</span><span class="token punctuation">;</span>
+
+<span class="token doc-comment comment">/**
+ * Created with IntelliJ IDEA.
+ *
+ * @Author: lilong329329@163.com
+ * @Date: 2021/07/07/16:05
+ * @Description:
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test1</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+
+       <span class="token comment">//大小写字母、数字  下划线   $</span>
+        <span class="token keyword">int</span> <span class="token constant">NUM</span>  <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> num <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+        <span class="token comment">//在同一个作用域中 {}   不能够出现两个相同的变量名</span>
+<span class="token comment">//        int num = 20;</span>
+        <span class="token keyword">int</span> $num <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+
+<span class="token comment">//        int 2num =20;     标识符的第一个字符不能是数字</span>
+<span class="token comment">//        int a a =20;   //标识符如果有多个单词，中间不能使用空格</span>
+
+<span class="token comment">//        long static = 10;  //关键字不能够做标识符(变量名)</span>
+<span class="token comment">//        long goto =10;    //保留字不能够做标识符</span>
+<span class="token comment">//        long  const =10;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="_2-8-java基本数据类型转换" tabindex="-1"><a class="header-anchor" href="#_2-8-java基本数据类型转换" aria-hidden="true">#</a> 2.8 java基本数据类型转换</h3><ol><li><h4 id="自动类型转换" tabindex="-1"><a class="header-anchor" href="#自动类型转换" aria-hidden="true">#</a> 自动类型转换</h4><ol><li>表示从内存范围小的转换成大的</li></ol></li></ol><div class="language-java line-numbers-mode" data-ext="java"><pre class="language-java"><code>把一个表示数据范围小的数值或者变量赋值给另一个表示数据范围大的变量。这种转换方式是自动的，直接书写即
+可
+例如：
+    
+        <span class="token keyword">int</span>  a <span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">;</span>  <span class="token comment">//内存4</span>
+        <span class="token keyword">double</span> b <span class="token operator">=</span> a<span class="token punctuation">;</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ol><li><h4 id="强制类型转换" tabindex="-1"><a class="header-anchor" href="#强制类型转换" aria-hidden="true">#</a> 强制类型转换</h4><p>1、把一个表示数据范围大的数值或者变量赋值给另一个表示数据范围小的变量。 强制类型转换格式：<mark>目标数据类型 变量名 = (目标数据类型)值或者变量;</mark></p></li></ol><div class="language-java line-numbers-mode" data-ext="java"><pre class="language-java"><code>
+        <span class="token keyword">double</span> c <span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;c:&quot;</span><span class="token operator">+</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">int</span> d <span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>c<span class="token punctuation">;</span>  <span class="token comment">//强制类型转换 会丢失精度</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>特殊情况  long(大)====&gt;float
+//long ==》folat类型的
+
+long f = 10;
+
+float g = f;
+double h = f;
+double ff =g;
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h1 id="day02-java基础语法" tabindex="-1"><a class="header-anchor" href="#day02-java基础语法" aria-hidden="true">#</a> day02 Java基础语法</h1><h1 id="_1、运算符" tabindex="-1"><a class="header-anchor" href="#_1、运算符" aria-hidden="true">#</a> 1、运算符</h1><h3 id="_1-1-算数运算符" tabindex="-1"><a class="header-anchor" href="#_1-1-算数运算符" aria-hidden="true">#</a> 1.1 算数运算符</h3><p>算数运算符：数学上 + - * / 取余（取模）</p><div class="language-java line-numbers-mode" data-ext="java"><pre class="language-java"><code><span class="token keyword">int</span>  a  <span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> b <span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> c  <span class="token operator">=</span> a<span class="token operator">+</span>b<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test2</span> <span class="token punctuation">{</span>
+    <span class="token comment">//main方法是程序的入口,程序启动，先找的 main</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">//1、算数表达式</span>
+        <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">11</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> b <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//+</span>
+        <span class="token keyword">int</span> c <span class="token operator">=</span> a<span class="token operator">+</span>b<span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//-</span>
+        <span class="token keyword">int</span> d <span class="token operator">=</span> a<span class="token operator">-</span>b<span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//*</span>
+        <span class="token keyword">int</span> e <span class="token operator">=</span> a<span class="token operator">*</span>b<span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//*</span>
+        <span class="token keyword">int</span> f <span class="token operator">=</span> b<span class="token operator">/</span>a<span class="token punctuation">;</span>
+
+        <span class="token keyword">float</span> ff <span class="token operator">=</span> b<span class="token operator">/</span>a<span class="token punctuation">;</span> <span class="token comment">//保留几位小数  1.81 （）学完APi之后</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>ff<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//% 取余（取模）  a =1  b =2</span>
+
+        <span class="token keyword">int</span> fff <span class="token operator">=</span> b<span class="token operator">%</span>a<span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>fff<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+注意：<span class="token operator">/</span>   和 <span class="token operator">%</span> 
+    <span class="token number">1</span> <span class="token operator">/</span>  表示除法 ，在java中 结果取整数取商
+    <span class="token number">2</span> <span class="token operator">%</span>  表示取余 ，在java中 结果取余数
+    
+<span class="token comment">//  字符串的拼接：</span>
+    
+
+        <span class="token comment">//不同的数据类型操作呢?</span>
+        <span class="token keyword">char</span> aaa <span class="token operator">=</span><span class="token char">&#39;a&#39;</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> bbb <span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token comment">// 不同数据类型操作，先把小的自动转换成大的 ，然后再进行操作</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>aaa<span class="token operator">+</span>bbb<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//字符串的操作</span>
+
+        <span class="token keyword">int</span> aaaa <span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> aaaaa <span class="token operator">=</span><span class="token number">107</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token operator">+</span><span class="token char">&#39;a&#39;</span><span class="token operator">+</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">//表示字符串的拼接  &quot;107&quot;</span>
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><mark>回顾：</mark></p><ul><li>标识符（命名规则,由大小写英文字母、数字、__、$可以做标识符，标识符中的大小写是区分的）</li><li>开头不能使用数字 不能使用关键字、保留字（goto、const 现在暂时不使用，未来可能会使用）</li><li>如果标识符用2个单词命名，中间不能有空格</li><li>其他命名规则基本都符合</li></ul><p>java中数据类型：基本数据类型和引用数据类型。</p><p>基本数据类型：</p><p>​ 整型：byte short int long 默认是 ：int类型</p><p>​ 浮点型：float double 默认是 double类型</p><p>​ 字符型： char（2）</p><p>​ 布尔：boolean （1）</p><p>基本数据类型的转换规则：</p><p>​ 自动转换 （小-》大） byte short <mark>&gt;int <mark>&gt;long</mark></mark>==&gt;&gt;float======》double类型的</p><p>​ 特殊的：char <mark>》int long</mark>=》float</p><p>​ ‘a’ 97 A 65 0 48</p><p>​ 强制类型转换：</p><p>​ 强制类型转换：从大的变成小的 规则：int a = （int）8L</p><p>1、把一个表示数据范围大的数值或者变量赋值给另一个表示数据范围小的变量。 强制类型转换格式：<mark>目标数据类型 变量名 = (目标数据类型)值或者变量;</mark></p><p>运算符：算数运算符：</p><p>​ 除法：取得结果是 商</p><p>​ 取余：取得结果是余数</p><h3 id="_1-2-赋值运算符" tabindex="-1"><a class="header-anchor" href="#_1-2-赋值运算符" aria-hidden="true">#</a> 1.2 赋值运算符</h3><table><thead><tr><th>符号</th><th>作用</th><th>说明</th></tr></thead><tbody><tr><td>=</td><td>赋值（右边赋值给左边）</td><td>int a =10;把10赋值给变量 a</td></tr><tr><td>-=</td><td>减后赋值</td><td>int a -=10 把a-10的值重新赋值给a</td></tr><tr><td>+=</td><td>加后赋值</td><td>int a +=10 把a+10的值重新赋值给a</td></tr><tr><td>*=</td><td>乘后赋值</td><td>int a <em>=10 把a</em>10的值重新赋值给a</td></tr><tr><td>/=</td><td>除后赋值</td><td>int a /=10 把a/10的值重新赋值给a</td></tr><tr><td>%=</td><td>取余后赋值</td><td>int a %=10 把a%10的值重新赋值给a</td></tr></tbody></table><p>单个值的话：</p><p>int a =10；</p><p>++a a 的值是11</p><p>a++ a的结果也是 11</p><p><mark>注意：</mark></p><ol><li>扩展运算符，隐含了强制类型转换</li></ol><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>short s =10;
+s =(short) (s+10);  //不能够自己主动进行强制转换
+
+//扩展运算符：+=   -=   *= 等等,隐含了强制转换
+
+s+=10;    //s=s+10;
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>多个值计算：</p><p>int x =10；</p><p>int y =x++; //求 x = 11 y=10</p><p>int y2 =++x x=11 y2 = 12</p><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>int x  =10;
+
+int y =x++;   //求  x =  11            y=10
+
+System.out.println(x);
+System.out.println(y);
+
+
+System.out.println(&quot;======================&quot;);
+
+
+int y2 =++x;  //       x=11            y2 = 11
+
+System.out.println(x);
+
+System.out.println(y2);
+
+//   练习题
+
+=======================================================================================================
+
+public class Test3 {
+    public static void main(String[] args) {
+
+
+        int x = 10;
+        int a =x++;   //a  10  x  11
+        int b =x++;   //b   11  x 12 
+        int c =x++;   //c 12   x 13
+        
+
+        int y = x++ + x++ + x++;    //30   33     33
+        
+        
+        int y1 =a+b+c;
+
+        System.out.println(y);
+
+        System.out.println(x);
+    }
+}
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="_1-3-关系运算符" tabindex="-1"><a class="header-anchor" href="#_1-3-关系运算符" aria-hidden="true">#</a> 1.3 关系运算符</h3><ul><li>== != &gt; &gt;= &lt; &lt;= 比较的结果 是boolean类型，结果要么true 要么false</li></ul><p>注意：= 和 ==</p><p>​ = 表示的是赋值 运算</p><p>== 表示 等于 就是关系表达式</p><h3 id="_1-4-逻辑运算符" tabindex="-1"><a class="header-anchor" href="#_1-4-逻辑运算符" aria-hidden="true">#</a> 1.4 逻辑运算符</h3><p>逻辑运算符： 与 或 非 &amp; | ! 举例 ：true &amp; true true true | false 有一个为true即为true</p><p>int i = 10; int j = 20; int k = 30;</p><p>&amp;&amp; 和 &amp;有什么区别？ a&amp;&amp;b</p><p>​ &amp;&amp; 具有短路效果，a为false b不用再判断，直接输出false 当a为true的时候，需要判断第二个。</p><p>​ &amp; a&amp;b 不管a的结果是啥，b都需要进行判断</p><p>|| 和| 有什么区别？</p><p>a||b 当a为true的时候，b不需要判断，直接可以输出结果，当a为false的时候，b需要判断</p><p>a|b 不管a为何值，b都需要判断。</p><p>符号 作用 说明 &amp;&amp; 短路与 作用和&amp;相同，但是有短路效果 || 短路或 作用和|相同，但是有短路效果 短路逻辑运算符 在逻辑与运算中，只要有一个表达式的值为false，那么结果就可以判定为false了，没有必要将所有表达式的值都 计算出来，短路与操作就有这样的效果，可以提高效率。同理在逻辑或运算中，一旦发现值为true，右边的表达式 将不再参与运算。 逻辑与&amp;，无论左边真假，右边都要执行。 短路与&amp;&amp;，如果左边为真，右边执行；如果左边为假，右边不执行。 逻辑或|，无论左边真假，右边都要执行。 短路或||，如果左边为假，右边执行；如果左边为真，右边不执行。</p><p>优点：节省计算机资源(&amp;&amp; ||)</p><h3 id="_1-5-三元运算符" tabindex="-1"><a class="header-anchor" href="#_1-5-三元运算符" aria-hidden="true">#</a> 1.5 三元运算符</h3><p>​ 格式：</p><p>​ 关系表达式 ? 表达式1：表达式2</p><p>int a =10； int b =11；</p><p>​ // 语言解释：a&gt;b？ true ：false</p><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>public class Test5 {
+    public static void main(String[] args) {
+
+        int i = 10;
+        int j = 20;
+
+        String s = i &gt; j ? &quot;111&quot; : &quot;222&quot;;
+
+        System.out.println(s);
+
+
+    }
+}
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>​ 案例：</p><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>package cn.jiupai.day01;
+
+/**
+ * Created with IntelliJ IDEA.
+ *
+ * @Author: lilong329329@163.com
+ * @Date: 2021/07/08/15:55
+ * @Description:
+ * 、需求：一座寺庙里住着三个和尚，已知他们的身高分别为150cm、210cm、165cm，
+ * 请用程序实现获取这三个和尚的最高身高，求三个和尚身高最高的
+ */
+public class Test7 {
+    public static void main(String[] args) {
+
+
+
+
+        int a =150;
+        int b =210;
+        int c =165;
+
+
+
+
+
+      int heshagn1 =a;
+      int heshagn2 =b;
+      int heshagn3 =c;
+
+
+      //求的是和尚1 和和尚2之间的最大值
+         int tempWeight = heshagn1 &gt; heshagn2 ? heshagn1 : heshagn2;
+
+
+         int  max = tempWeight&gt;heshagn3?tempWeight:heshagn3;
+
+        System.out.println(max);
+
+//        int tempWeight = heshagn1 &gt; heshagn2 ? heshagn1 : heshagn2;
+//
+//        int maxWeight = tempWeight &gt; heshagn3 ? tempWeight : heshagn3;
+//
+//        System.out.println(&quot;三个和尚中身高最高的是&quot;+maxWeight);
+
+
+//        int s1 = heshagn1 &gt; heshagn2 ? heshagn1 : heshagn2;
+
+
+    }
+}
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h1 id="_2、键盘录入" tabindex="-1"><a class="header-anchor" href="#_2、键盘录入" aria-hidden="true">#</a> 2、键盘录入</h1><p>​ 键盘录入的三步：</p><p>​ 1、创建Scanner对象</p><p>​ Scanner scanner = new Scanner(<a href="http://System.in" target="_blank" rel="noopener noreferrer">System.in<span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span></a>) //Scanner对象是java本身就有的</p><p>​ 2、System.out.println(&quot;请输入XXXX&quot;)</p><p>​ 3、通过变量名 接收键盘录入的值</p><p>​ int a = scanner.nextInt（）</p><p>题目：请键盘录入三个数，并比较三个数中的最大值？</p><p>回顾：</p><p>​ 运算符：</p><p>​ 算数运算符</p><p>​ 关系运算符</p><p>​ 逻辑运算符 (&amp; | ! ^ &amp;&amp; ||) 其中 双与和双或在一定条件下，是有短路效果的</p><p>​ 赋值运算符（i++ ++i） i++先赋值 再自增1 ++i 先自增1 在 赋值</p><p>​ 三运运算符(格式a&gt;b?a:b)</p><h1 id="_3、流程控制语句" tabindex="-1"><a class="header-anchor" href="#_3、流程控制语句" aria-hidden="true">#</a> 3、流程控制语句</h1><h3 id="if语句" tabindex="-1"><a class="header-anchor" href="#if语句" aria-hidden="true">#</a> if语句</h3><ul><li>顺序结构 (代码从上到下执行) <ul><li>分支结构（if switch） 可以控制语句执行的步骤</li><li 语句体;="">格式：if(关系表达式)</li></ul></li></ul><div class="language-java line-numbers-mode" data-ext="java"><pre class="language-java"><code><span class="token keyword">if</span>（关系表达式）<span class="token punctuation">{</span>
+
+​		sout。。。
+
+<span class="token punctuation">}</span>	<span class="token keyword">else</span><span class="token punctuation">{</span>
+
+fjkasjfl
+
+<span class="token punctuation">}</span>
+
+<span class="token comment">//第三种格式</span>
+
+<span class="token keyword">if</span><span class="token punctuation">(</span>关系表达式<span class="token punctuation">)</span><span class="token punctuation">{</span>
+	语句体<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span>（关系表达式）<span class="token punctuation">{</span>
+    语句体；
+<span class="token punctuation">}</span>
+<span class="token punctuation">.</span>
+<span class="token punctuation">.</span>
+<span class="token keyword">else</span><span class="token punctuation">{</span>
+    语句体
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="switch语句" tabindex="-1"><a class="header-anchor" href="#switch语句" aria-hidden="true">#</a> switch语句</h3><div class="language-java line-numbers-mode" data-ext="java"><pre class="language-java"><code>格式：
+
+   <span class="token keyword">switch</span><span class="token punctuation">(</span>关系表达式<span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+		case1<span class="token operator">:</span> 
+           语句体<span class="token punctuation">;</span>
+           <span class="token keyword">break</span><span class="token punctuation">;</span><span class="token comment">//表示结束当前的switch语句</span>
+           
+         case2：
+             语句体；
+             <span class="token keyword">break</span>
+             
+          <span class="token keyword">default</span>：
+             	语句体；
+             	<span class="token keyword">break</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="for循环结构" tabindex="-1"><a class="header-anchor" href="#for循环结构" aria-hidden="true">#</a> for循环结构</h3><p>for循环 while循环 do while循环 都是循环语句</p><p>格式：</p><div class="language-java line-numbers-mode" data-ext="java"><pre class="language-java"><code>	<span class="token keyword">for</span>（初始条件；判断条件；结束条件）<span class="token punctuation">{</span>
+        循环体<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>回顾：</p><ol><li>水仙花数：</li></ol><p>789 （分别求个位、十位、百位）</p><p>个位：789 %10</p><p>十位：789/10%10</p><p>百位：789/100</p><ol><li>for循环的格式</li></ol><p>for(初始化语句；结束条件；控制语句){</p><p>​ 方法体</p><p>}</p><p>求1-10之间的偶数和</p><div class="language-java line-numbers-mode" data-ext="java"><pre class="language-java"><code><span class="token keyword">int</span> sum <span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span><span class="token number">10</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>i<span class="token operator">%</span><span class="token number">2</span> <span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        sum <span class="token operator">=</span>sum<span class="token operator">+</span>i<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>sum<span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="while循环" tabindex="-1"><a class="header-anchor" href="#while循环" aria-hidden="true">#</a> while循环</h3><p>格式：</p><div class="language-java line-numbers-mode" data-ext="java"><pre class="language-java"><code>初始化语句<span class="token punctuation">;</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span>条件判断语句<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+循环体语句<span class="token punctuation">;</span>
+条件控制语句<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>                            
+<span class="token keyword">while</span><span class="token punctuation">(</span>i<span class="token operator">&lt;=</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">{</span>                      
+    sum <span class="token operator">=</span> sum<span class="token operator">+</span>i；  循环体语句
+        i<span class="token operator">++</span>；
+<span class="token punctuation">}</span>
+
+
+<span class="token keyword">do</span><span class="token punctuation">{</span>
+
+​	sum <span class="token operator">=</span>sum<span class="token operator">+</span>i<span class="token punctuation">;</span>
+
+​	i<span class="token operator">++</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span><span class="token keyword">while</span><span class="token punctuation">(</span>i<span class="token operator">&lt;=</span><span class="token number">10</span><span class="token punctuation">)</span>
+
+
+
+
+<span class="token keyword">while</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    sum<span class="token operator">=</span>sum<span class="token operator">+</span>i；
+        
+        <span class="token keyword">break</span><span class="token punctuation">;</span>  表示结束当前的循环
+<span class="token punctuation">}</span>
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="do-while循环" tabindex="-1"><a class="header-anchor" href="#do-while循环" aria-hidden="true">#</a> do While循环</h3><p>初始化语句</p><p>do{</p><p>​ sum =sum+i;</p><p>​ i++;</p><p>}while(i&lt;=10)</p><p>回忆：</p><div class="language-java line-numbers-mode" data-ext="java"><pre class="language-java"><code><span class="token number">1</span>、<span class="token keyword">for</span>循环
+<span class="token number">2</span>、<span class="token keyword">while</span>循环
+<span class="token number">3</span>、<span class="token keyword">do</span>  <span class="token keyword">while</span>循环
+ 
+    对比三种循环方式：
+
+<span class="token keyword">for</span>循环和<span class="token keyword">while</span>循环先判断条件是否成立，然后决定是否执行循环体（先判断后执行）
+<span class="token keyword">do</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token keyword">while</span>循环先执行一次循环体，然后判断条件是否成立，是否继续执行循环体（先执行后判断）
+<span class="token keyword">for</span>循环和<span class="token keyword">while</span>的区别
+条件控制语句所控制的自增变量，因为归属<span class="token keyword">for</span>循环的语法结构中，在<span class="token keyword">for</span>循环结束后，就不能再次被访
+问到了
+条件控制语句所控制的自增变量，对于<span class="token keyword">while</span>循环来说不归属其语法结构中，在<span class="token keyword">while</span>循环结束后，该变
+量还可以继续使用
+死循环（无限循环）的三种格式
+<span class="token number">1.</span> <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token punctuation">;</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token number">2.</span> <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token number">3.</span> <span class="token keyword">do</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如何跳出循环以及结束循环</p><p>​ 结束本次循环，继续下次循环 continue；</p><p>​ 直接结束循环; break;</p><div class="language-java line-numbers-mode" data-ext="java"><pre class="language-java"><code><span class="token keyword">package</span> <span class="token namespace">cn<span class="token punctuation">.</span>jiupai<span class="token punctuation">.</span>day01</span><span class="token punctuation">;</span>
+
+<span class="token doc-comment comment">/**
+ * Created with IntelliJ IDEA.
+ *
+ * @Author: lilong329329@163.com
+ * @Date: 2021/07/12/15:41
+ * @Description:
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test18</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+
+
+    <span class="token comment">//continue  只能用在循环里面,结束本次循环，继续下一次循环</span>
+
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">10</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>i<span class="token operator">==</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+<span class="token comment">//                continue;  结束当前本次循环，继续下一次循环</span>
+
+                <span class="token keyword">break</span><span class="token punctuation">;</span>  直接跳出循环语句
+            <span class="token punctuation">}</span>
+
+
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="循环嵌套概述" tabindex="-1"><a class="header-anchor" href="#循环嵌套概述" aria-hidden="true">#</a> 循环嵌套概述：</h3><p>在for循环里面，还有一个for循环;</p><div class="language-java line-numbers-mode" data-ext="java"><pre class="language-java"><code><span class="token keyword">package</span> <span class="token namespace">cn<span class="token punctuation">.</span>jiupai<span class="token punctuation">.</span>day01</span><span class="token punctuation">;</span>
+
+<span class="token doc-comment comment">/**
+ * Created with IntelliJ IDEA.
+ *
+ * @Author: lilong329329@163.com
+ * @Date: 2021/07/12/15:41
+ * @Description:
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test18</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+
+
+    <span class="token comment">//continue  只能用在循环里面,结束本次循环，继续下一次循环</span>
+
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">10</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>i<span class="token operator">==</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+<span class="token comment">//                continue;</span>
+
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+
+
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="_4、生成随机数" tabindex="-1"><a class="header-anchor" href="#_4、生成随机数" aria-hidden="true">#</a> 4、生成随机数</h2><p>1、创建生成随机数的对象</p><p>Random rd = new Random()；</p><h1 id="day04-数组" tabindex="-1"><a class="header-anchor" href="#day04-数组" aria-hidden="true">#</a> day04 数组</h1><h2 id="_1-数组" tabindex="-1"><a class="header-anchor" href="#_1-数组" aria-hidden="true">#</a> 1 数组</h2><p>1.1 什么是数组？</p><p>数组就是存储同一种数据类型的容器、长度是固定的，不可变。例如：</p><p>数组的定义格式：</p><p>​ 动态数组的初始化方式定义： 数据类型[] 数组的变量名 = new 数据类型[长度]</p><p>​ int[] arr = new int[10]; 默认存储的值为：都是0</p><p>静态的数组定义方式： 基本数据类型 [] 数组的变量名字 ={2,1,3,4,5,7};</p><p>​ int[] arr = {1,2,3,4,5,6,7}；</p><h2 id="_1-2-数组的索引" tabindex="-1"><a class="header-anchor" href="#_1-2-数组的索引" aria-hidden="true">#</a> 1.2 数组的索引</h2><p>动态数组：</p><p>​ int[] arr = new int[10]</p><p>​ 位置、索引的概念：在数组里面存的每一个数据，都有一个编号.</p><p>数组中的两个经典错误：</p><div class="language-java line-numbers-mode" data-ext="java"><pre class="language-java"><code>
+<span class="token comment">//        System.out.println(arr[3]);   //ArrayIndexOutOfBoundsException: 3  索引越界异常</span>
+
+        <span class="token comment">//报错</span>
+
+        arr <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">//空指针异常   NullPointerException</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>1、数组的定义方式（会）</p><p>2、数组的值和索引（位置）</p><p>3、会求数组的长度</p><p>5、会利用for循环，遍历出数组中的每一个值。</p><h2 id="_1-3-for循环遍历数组" tabindex="-1"><a class="header-anchor" href="#_1-3-for循环遍历数组" aria-hidden="true">#</a> 1.3 for循环遍历数组</h2><div class="language-java line-numbers-mode" data-ext="java"><pre class="language-java"><code><span class="token keyword">package</span> <span class="token namespace">cn<span class="token punctuation">.</span>jiupai<span class="token punctuation">.</span>day04<span class="token punctuation">.</span>test01</span><span class="token punctuation">;</span>
+
+<span class="token doc-comment comment">/**
+ * Created with IntelliJ IDEA.
+ *
+ * @Author: lilong329329@163.com
+ * @Date: 2021/07/14/14:31
+ * @Description:
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test2</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">33</span><span class="token punctuation">,</span><span class="token number">55</span><span class="token punctuation">,</span><span class="token number">33</span><span class="token punctuation">,</span><span class="token number">22</span><span class="token punctuation">,</span><span class="token number">11</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+
+        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr2 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">22</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">22</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">22</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+
+       <span class="token comment">/*
+       这样从数组中取值，不可取
+       System.out.println(arr[0]);
+        System.out.println(arr[1]);
+        System.out.println(arr[2]);
+        System.out.println(arr[3]);
+        System.out.println(arr[4]);
+        System.out.println(arr[5]);
+        System.out.println(arr[6]);
+        System.out.println(arr[7]);
+        System.out.println(arr[8]);*/</span>
+
+
+       <span class="token comment">/* //利用for循环的方式 循环遍历
+
+        //如何获取数组的长度呢
+        System.out.println(arr.length);
+        //length表示数组的一个属性,求出的是数组的长度
+
+        System.out.println(&quot;===============================&quot;);
+
+        for (int i=0;i&lt;arr.length;i++){
+
+            System.out.println(arr[i]);
+        }*/</span>
+
+
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>1.4 案例</p><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code> int[] arr = {2,22,4,8,99,34};
+ 最大值获取：从数组的所有元素中找出最大值。
+* 实现思路：
+* 定义变量，保存数组0索引上的元素
+* 遍历数组，获取出数组中的每个元素
+* 将遍历到的元素和保存数组0索引上值的变量进行比较
+* 如果数组元素的值大于了变量的值，变量记录住新的值
+* 数组循环遍历结束，变量保存的就是数组中的最大值
+public class Test3 {
+    public static void main(String[] args) {
+
+        //静态初始化定义数组
+        int[] arr = {2,22,4,8,99,34};
+        //求出数组中的最大值，利用数组的思想求最大值
+        int max = arr[4];
+        for (int i = 0; i &lt; arr.length; i++) {
+            //取出来每一个值，相互进行比较
+            //利用if语句比较大小
+            if (arr[i]&gt;max) {
+                max = arr[i];
+            }
+        }
+        System.out.println(&quot;最大值为：&quot;+max);
+
+    }
+}
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div><!----><footer class="page-meta"><!----><div class="meta-item update-time"><span class="label">上次编辑于: </span><!----></div><div class="meta-item contributors"><span class="label">贡献者: </span><!--[--><!--[--><span class="contributor" title="email: lilong329329@163.com">lilong</span><!--]--><!--]--></div></footer><nav class="page-nav"><a href="/JavaSE/JVM.html" class="nav-link prev" aria-label="/JavaSE/JVM.md"><div class="hint"><span class="arrow left"></span>上一页</div><div class="link"><!---->/JavaSE/JVM.md</div></a><!----></nav><div class="giscus-wrapper input-top" style="display:block;"><div style="text-align:center">Loading...</div></div><!----><!--]--></main><!--]--><footer class="footer-wrapper"><div class="footer"><a href='https://beian.miit.gov.cn' target='_blank' style='color: var(--c-text-lighter);>闽ICP备18001806号-1</a></div><div class="copyright">Copyright © 2023 李龙</div></footer><!--]--></div><!--]--><!----><!--]--></div>
+    <script type="module" src="/assets/app-f67e37b4.js" defer></script>
+  </body>
+</html>
