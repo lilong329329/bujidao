@@ -47,17 +47,25 @@
 
 **本项目的内容主要来自**
 
-自己的工作总结，读书笔记，以及对网上博客文章进行整理与总结。希望以最明了易懂的方式呈现出java技术架构，以便轻松应对面试
+自己的工作总结，读书笔记，以及对网上博客文章进行整理与总结。希望以最明了易懂的方式呈现出java技术架构，以便轻松应对未来挑战
 
-- [Java 全栈知识体系](https://pdai.tech/)
-- [Java学习+面试指南](<https://github.com/Snailclimb/JavaGuide>)
-- [一灯架构](https://www.zhihu.com/people/mu-rong-kevin)
-- [阮一峰的网络日志](http://www.ruanyifeng.com/blog/)
-- [mrbird博客与开源项目](https://github.com/wuyouzhuguli)
-- [芋道源码](http://www.iocoder.cn/?qun)
-- [张开涛博客](<https://www.iteye.com/blog/user/jinnianshilongnian>)
-- [纯洁的微笑](http://www.ityouknow.com/)
-- 等等优秀的博客会在具体文章后列出
+[//]: # (- [Java 全栈知识体系]&#40;https://pdai.tech/&#41;)
+
+[//]: # (- [Java学习+面试指南]&#40;<https://github.com/Snailclimb/JavaGuide>&#41;)
+
+[//]: # (- [一灯架构]&#40;https://www.zhihu.com/people/mu-rong-kevin&#41;)
+
+[//]: # (- [阮一峰的网络日志]&#40;http://www.ruanyifeng.com/blog/&#41;)
+
+[//]: # (- [mrbird博客与开源项目]&#40;https://github.com/wuyouzhuguli&#41;)
+
+[//]: # (- [芋道源码]&#40;http://www.iocoder.cn/?qun&#41;)
+
+[//]: # (- [张开涛博客]&#40;<https://www.iteye.com/blog/user/jinnianshilongnian>&#41;)
+
+[//]: # (- [纯洁的微笑]&#40;http://www.ityouknow.com/&#41;)
+
+[//]: # (- 等等优秀的博客会在具体文章后列出)
 
 
 
